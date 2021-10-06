@@ -17,7 +17,7 @@ auto main() -> int
     if (name.empty()) {
         std::cout << "OK, keep your secrets.\n";
     } else {
-        std::cout << "Hello, " << name << "!\n";
+        std::cout << "Siema , " << name << "!\n";
     }
 
     return 0;
