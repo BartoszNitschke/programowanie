@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+struct Studenci
+{
+    string imie;
+    string nazwisko;
+    string nr_indeksu;
+    string semestr;
+    float srednia;
+};
+
+
+
+int main()
+{
+    Studenci BartoszNitschke =
+    {
+        "Bartosz",
+        "Nitschke",
+        "s25771",
+        "Pierwszy",
+        4.5,
+
+    };
+
+    cout << "Dane studenta:"
+        << endl << "----------------------"
+        << endl << "Imie: " << BartoszNitschke.imie
+        << endl << "Nazwisko: " << BartoszNitschke.nazwisko
+        << endl << "Nr indeksu: " << BartoszNitschke.nr_indeksu
+        << endl << "Semestr: " << BartoszNitschke.semestr
+        << endl << "Srednia: " << BartoszNitschke.srednia;
+
+    
+
+
+   
+    return 0;
+}
