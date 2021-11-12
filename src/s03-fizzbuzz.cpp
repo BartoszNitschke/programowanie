@@ -1,25 +1,28 @@
 #include <iostream>
 
+using namespace std;
+
 int liczba;
 
 int main()
 {
-std::cout<<"Proszę podać liczbę :";
-std::cin>> liczba;
+	cout << "Prosze podac liczbe: " << endl;
+	cin >> liczba;
 
-for (int i = 0; i<=1 ;i++){
-if(i % 3 == 0 && liczba %5 == 0)
-{
-std::cout<<i<<"Fizzbuzz";
-}
-else if(i % 5 == 0)
-{
-std::cout<<i<<"Buzz";
-}
-else if(i %3 == 0)
-{
-std::cout<<i<<"Fizz";
-}
-}
-return 0;
+	cout << liczba << endl;
+
+	if ((liczba % 3 == 0) && (liczba % 5 == 0))
+	{
+		cout << "Fizzbuzz" << endl;
+	}
+	else if (liczba % 5 == 0)
+	{
+		cout << "Buzz" << endl;
+	}
+	else if (liczba % 3 == 0)
+	{
+		cout << "Fizz" << endl;
+	}
+
+	return 0;
 }
