@@ -149,6 +149,104 @@ int main()
     
 }
 
-//ZADANIE 5
+//ZADANIE 7
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+struct group
+{
+    string nazwa;
+    vector<string>studenci;
+};
+
+void add_student(group a,string s)
+{
+    auto studs = a.studenci;
+    studs.push_back(s);
+    
+}
+
+int main()
+{
+    group grupa;
+    grupa.nazwa = "Mistrze";
+    grupa.studenci = { "Jankowski","Kowalski","Nowak" };
+    
+    auto studs = grupa.studenci;
+
+    add_student(grupa, "Budzinski");
 
 
+    return 0;
+}
+
+//ZADANIE 9
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+auto bubble_sort(std::vector<int>& vec) -> void 
+{
+    auto changes_were_made = true;
+    
+    for (auto j = 0; j < vec.size() && changes_were_made; j++) 
+    {
+        changes_were_made = false;
+        
+        for (auto i = 0; i < vec.size() - 1; i++) 
+        {
+            if (vec[i] > vec[i + 1]) 
+            {
+                auto tmp = vec[i];
+                vec[i] = vec[i + 1];
+                vec[i + 1] = tmp;
+                changes_were_made = true;
+            }
+        }
+    }
+}
+
+void contains_all(vector<int>&a,vector<int>&b)
+{
+
+    if (a.size() == b.size())
+    {
+        bubble_sort(a);
+        bubble_sort(b);
+
+        int it = 0;
+        int licznik = 0;
+
+        for (int k = 0; k < a.size(); k++)
+        {
+            it++;
+            if (a[k] == b[k])
+                licznik++;
+            else
+                continue;
+        }
+        if (it == licznik)
+        {
+            cout << "Wektory sa takie same" << endl;
+        }
+        else
+            cout << "Wektory roznia sie" << endl;
+    }
+    else
+        cout << "Wektory sa roznej dlugosci" << endl;
+}
+
+int main()
+{
+    vector<int>vec = { 1,2,3,5,7,9 };
+    vector<int>vec1 = { 3,2,7,3,9,1 };
+
+    contains_all(vec, vec1);
+
+    return 0;
+}
