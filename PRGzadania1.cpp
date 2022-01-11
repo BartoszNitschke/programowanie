@@ -301,3 +301,48 @@ int main()
     return 0;
 }
 
+//ZADANIE 10
+
+#include <iostream>
+
+using namespace std;
+
+string s(string);
+string box_print(string, string, string, string, string);
+
+int main()
+{
+    cout << box_print("jest","tu","sobie","taka","ramka");
+}
+
+string s(string w)
+{
+    string a;
+    a += "* ";
+    a += w;
+    int b = (8 - a.length()) - 2;
+    if (b > 0)
+    {
+        for (int i = 0; i <= b; i++)
+        {
+            a += " ";
+
+        }
+    }
+
+    a += "*";
+    return a;
+}
+
+string box_print(string a, string b, string c, string d, string e)
+{
+    cout << "********" << endl;
+    cout << s(a) << endl;
+    cout << s(b) << endl;
+    cout << s(c) << endl;
+    cout << s(d) << endl;
+    cout << s(e) << endl;
+    cout << "********" << endl;
+
+    return " ";
+}
