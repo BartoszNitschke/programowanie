@@ -1,0 +1,149 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<string>login;
+vector<string>haslo;
+vector<string>imie;
+vector<string>nazwisko;
+vector<float>stan;
+
+int zaloguj();
+void wyloguj();
+void stworz();
+void historia();
+void przelew();
+void kantor();
+void kredyt();
+void lokata();
+void lotto();
+
+
+int main()
+{
+}
+void stworz();
+{
+string imie1;
+string nazwisko1;
+string login1;
+string haslo1;
+int id;
+
+
+ cout<<"Tworzenie konta"<<endl;
+ cout<<"====================="<<endl<<endl;
+cout<<"Wprowadz imie: "<<endl;
+cin>>imie1;
+cout<<"Wprowadz nazwisko: "<<endl;
+cin>>nazwisko1;
+
+do
+{
+cout<<"Wprowadz login: "<<endl;
+cin>>login1;
+
+for(int i=0;i<login.size();i++)
+{
+if(login1==login[i])
+{
+cout<<"Podany login juz istnieje"<<endl;
+break;
+}
+}
+}
+while(login1!=login[i])
+
+cout<<"Wprowadz nazwisko: "<<endl;
+cin>>nazwisko1;
+
+login.push.back(login1);
+haslo.push.back(haslo1);
+imie.push.back(imie1);
+nazwisko.push.back(nazwisko1);
+stan.push.back(0);
+
+//dodac id do kazdego konta
+
+
+cout<<"Witaj "<<imie1<<" "<<nazwisko1<<" w banku"<<endl;
+}
+
+
+
+int zaloguj();
+{
+//po zalogowaniu na konto wprowadzic tymczasowe zmienne do ktorych beda przypisane dane
+        int warunek=0;
+        string login2;
+        string haslo2;
+do
+        cout<<"Logowanie"<<endl;
+        cout<<"======================="
+        cout<<"Login: "
+        cin>>login2;
+        cout<<endl<<"Haslo: ";
+        cin>>haslo2;
+
+        for(int i=0;i<login.size();i++)
+        {  if((login[i]==login2)&&(haslo[i]==haslo2))
+                warunek++;
+                cout<<"Gratulacje, zalogowales sie!"<<endl;
+                else {
+                cout<<"Zly login lub haslo, sprobuj ponownie"<<endl;
+                break;}
+        }
+
+while(warunek==1);
+}
+
+void wyloguj()
+{
+char wybor;
+
+cout<<"Czy na pewno chcesz sie wylogowac? (T/N)"<<endl;
+cin>>wybor;
+
+if(wybor==T)
+cout<<"Wylogownaie nastapilo pomyslnie!"<<endl;
+
+}
+
+void przelew()
+{
+float kwota;
+string adresat;
+cout<<"Jaka kwote chcesz przelac?"
+cin>>kwota;
+cout<<"Wypisz adresata:"<<endl;
+cin>>adresat;
+
+//warunek na sprawdzenie czy jest taka kwota na koncie
+for(int i=0;i<login.size();i++)
+{
+        if(adresat==login[i])
+{               stan-=kwota;
+                stan[i]+=kwota;
+}
+
+        else
+        stan-=kwota;
+}
+
+}
+void historia();
+{
+
+}
+
+
+
+
+}
+
+;
+
+
+
+ 
