@@ -372,8 +372,7 @@ void interfejs2()
         cout << "4. Lokata" << endl;
         cout << "5. Lotto" << endl;
         cout << "6. Kantor" << endl;
-        cout << "7. Ustawienia konta" << endl;
-        cout << "8. Wyloguj" << endl;
+        cout << "7. Wyloguj" << endl;
         cin >> wybor;
         system("cls");
 
@@ -399,8 +398,6 @@ void interfejs2()
             kantor();
             break;
         case 7:
-
-        case 8:
             char choice;
             cout << "Czy na pewno chcesz sie wylogowac? (T/N)" << endl;
             cin >> choice;
